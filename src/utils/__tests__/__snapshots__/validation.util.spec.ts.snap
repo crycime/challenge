@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ValidationUtil getErrorMsg should return error unknown for constraints not found in error object 1`] = `
+Array [
+  Object {
+    "msg": "error unknown",
+    "path": "age",
+    "value": NaN,
+  },
+]
+`;
+
+exports[`ValidationUtil getErrorMsg should return errorMsg for incorrect array 1`] = `
+Array [
+  Object {
+    "msg": "{\\"isNumber\\":\\"age must be a number conforming to the specified constraints\\"}",
+    "path": "0.age",
+    "value": NaN,
+  },
+]
+`;
+
+exports[`ValidationUtil getErrorMsg should return errorMsg for incorrect object 1`] = `
+Array [
+  Object {
+    "msg": "{\\"isNumber\\":\\"age must be a number conforming to the specified constraints\\"}",
+    "path": "age",
+    "value": NaN,
+  },
+]
+`;
+
+exports[`ValidationUtil getErrorMsg should return errorMsg for incorrect object with nested TestClass 1`] = `
+Array [
+  Object {
+    "msg": "{\\"isNumber\\":\\"age must be a number conforming to the specified constraints\\"}",
+    "path": "data.0.age",
+    "value": NaN,
+  },
+]
+`;
+
+exports[`ValidationUtil getErrorMsg should return null for empty error message 1`] = `
+Array [
+  Object {
+    "msg": "{\\"isNumber\\":\\"age must be a number conforming to the specified constraints\\"}",
+    "path": "0.data.0.age",
+    "value": NaN,
+  },
+]
+`;

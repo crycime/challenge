@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModelUtil generateQueryBaseOption should transform to mongodb paging query 1`] = `
+Object {
+  "pageSize": 10,
+  "skip": 10,
+}
+`;
+
+exports[`ModelUtil generateQueryBaseOption should transform to mongodb sort ascending query 1`] = `
+Object {
+  "collation": Object {
+    "locale": "en",
+  },
+  "pageSize": 10,
+  "skip": 10,
+  "sort": Object {
+    "test": 1,
+  },
+}
+`;
+
+exports[`ModelUtil generateQueryBaseOption should transform to mongodb sort descending query 1`] = `
+Object {
+  "collation": Object {
+    "locale": "en",
+  },
+  "pageSize": 10,
+  "skip": 10,
+  "sort": Object {
+    "test": 1,
+  },
+}
+`;
+
+exports[`ModelUtil transformUpdateObject should not unset key if not included in removeKeys 1`] = `
+Object {
+  "$unset": Object {
+    "key2": "",
+  },
+  "key1": null,
+}
+`;
+
+exports[`ModelUtil transformUpdateObject should not unset key if value is not null 1`] = `
+Object {
+  "$unset": Object {
+    "key2": "",
+  },
+  "key1": "test",
+}
+`;
+
+exports[`ModelUtil transformUpdateObject should unset key if value is null 1`] = `
+Object {
+  "$unset": Object {
+    "key2": "",
+  },
+  "key1": 1,
+}
+`;
+
+exports[`ModelUtil transformUpdateObject should unset keys if value is null 1`] = `
+Object {
+  "$unset": Object {
+    "key1": "",
+    "key2": "",
+  },
+}
+`;

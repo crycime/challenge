@@ -1,0 +1,15 @@
+{
+  "apps": [
+    {
+      "name": "backend",
+      "script": "dist/src/main.js",
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "min_uptime": "200s",
+      "max_restarts": 10,
+      "ignore_watch": ["node_modules"],
+      "exec_interpreter": "node",
+      "exec_mode": "fork",
+      "autorestart": true
+    }
+  ]
+}

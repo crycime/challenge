@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GET /pair fail cases should throw MongoResponse Error if Model find fail 1`] = `
+[MockFunction spyHandlerGetPairList] {
+  "calls": Array [
+    Array [],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`GET /pair fail cases should throw MongoResponse Error if Model find fail 2`] = `
+[MockFunction spyRedisGet] {
+  "calls": Array [
+    Array [
+      "pair:list",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`GET /pair fail cases should throw MongoResponse Error if Model find fail 3`] = `
+[MockFunction spyPairRepositoryFind] {
+  "calls": Array [
+    Array [
+      Object {
+        "filter": Object {},
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`GET /pair fail cases should throw MongoResponse Error if Model find fail 4`] = `
+Object {
+  "code": 502,
+  "message": "ModelBaseService - find:My Error",
+  "path": "/pair",
+  "statusCode": 502,
+  "type": "MongoResponseErrorException",
+}
+`;
+
+exports[`GET /pair success cases should return pair list response with cache 1`] = `
+[MockFunction spyHandlerGetPairList] {
+  "calls": Array [
+    Array [],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`GET /pair success cases should return pair list response with cache 2`] = `
+[MockFunction spyRedisGet] {
+  "calls": Array [
+    Array [
+      "pair:list",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`GET /pair success cases should return pair list response with cache 3`] = `
+Array [
+  Object {
+    "convert": "USD",
+    "currency": "ETH",
+    "id": "61cc1f3a428d36921fdcf8d2",
+    "name": "Ethereum",
+    "price": "3104.46666752",
+    "price_change": "34.95363492",
+    "volume": "831812243.27",
+  },
+]
+`;
+
+exports[`GET /pair success cases should return pair list response with no cache 1`] = `
+[MockFunction spyHandlerGetPairList] {
+  "calls": Array [
+    Array [],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`GET /pair success cases should return pair list response with no cache 2`] = `
+[MockFunction spyRedisGet] {
+  "calls": Array [
+    Array [
+      "pair:list",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`GET /pair success cases should return pair list response with no cache 3`] = `
+[MockFunction spyPairRepositoryFind] {
+  "calls": Array [
+    Array [
+      Object {
+        "filter": Object {},
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`GET /pair success cases should return pair list response with no cache 4`] = `
+[MockFunction spyRedisSet] {
+  "calls": Array [
+    Array [
+      Object {
+        "key": "pair:list",
+        "value": "[{\\"updatedBy\\":\\"system\\",\\"createdBy\\":\\"system\\",\\"_id\\":\\"61cc1f3a428d36921fdcf8d2\\",\\"name\\":\\"Ethereum\\",\\"currency\\":\\"ETH\\",\\"convert\\":\\"USD\\",\\"price\\":\\"3104.46666752\\",\\"volume\\":\\"831812243.27\\",\\"price_change\\":\\"34.95363492\\"}]",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`GET /pair success cases should return pair list response with no cache 5`] = `
+Array [
+  Object {
+    "convert": "USD",
+    "createdBy": "system",
+    "currency": "ETH",
+    "id": "61cc1f3a428d36921fdcf8d2",
+    "name": "Ethereum",
+    "price": "3104.46666752",
+    "price_change": "34.95363492",
+    "updatedBy": "system",
+    "volume": "831812243.27",
+  },
+]
+`;
